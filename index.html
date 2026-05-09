@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos</title>
+
+    <link rel="stylesheet" href="css/output.css">
+
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+    <header class="py-4 flex items-center gap-4 border-b sticky top-0 w-full bg-white">
+
+        <img src="img/list.png" alt="menu" id="menu" class="pl-6 duration-500" onclick="AparecerbarraLateral()">
+        <p class="font-bold text-2xl">CRUD App</p>
+
+    <!--BARRA DE NAVEGAÇÃO-->
+        <div id="barraLateralPai" class="duration-500 opacity-0 pointer-events-none absolute top-full border-t w-full h-dvh bg-[#0000005e]">
+            <div id="barraLateralFilho" class="overflow-hidden whitespace-nowrap duration-500 w-0 shadow-2xl h-full float-left bg-white py-2 flex items-start flex-col gap-4">
+                <h1 class="pt-4 px-6 text-2xl font-bold">Selecione:</h1>
+                <a href="" class="flex w-full p-3 px-6 bg-blue-600 duration-300 hover:bg-blue-700 text-white rounded-r-md gap-2">
+                    <img src="img/to-do-list.png" alt="">
+                    <p>Produtos</p>
+                </a>
+        
+                <a href="criar.html" class="flex w-full p-3 px-6 bg-gray-600 duration-300 hover:bg-gray-700 text-white rounded-r-md gap-2">
+                    <img src="img/pen.png" alt="">
+                    <p>Criar Produtos</p>
+                </a>
+            </div>
+        
+        </div>
+
+    <!--CAMPO EDITAR PRODUTOS-->
+        <div id="divEditarPai" class="duration-500 absolute top-0 w-full h-dvh bg-[#0000005e] flex items-center justify-center pointer-events-none opacity-0">
+
+            <div id="divEditarFilho" class="duration-500 w-4/10 max-xl:w-2/3 max-sm:w-3/4 max-sm:h-7/10 h-4/5 bg-white rounded-md shadow-lg p-10 flex flex-col gap-10 -translate-y-full">
+                <div class="flex justify-between items-center">
+                    <h1 class="text-2xl font-bold tracking-wide">Editar Produto</h1>
+                    <img src="img/close.png" alt="close" onclick="ExibirEditar()">
+                </div>
+                <div>
+                    <label for="">Nome:</label>
+                    <input id="nome" type="text" placeholder="Nome" class="w-full border rounded-md px-5 py-2 mb-5">
+                    
+                    <label for="">Preço:</label>
+                    <input id="preco" type="number" placeholder="Preço" class="w-full border rounded-md px-5 py-2">
+                </div>
+                <button id="botaoSalvar" class="w-full text-center py-2.5 bg-blue-600 rounded-md text-white font-bold tracking-wide active:translate-y-0.5 duration-300 hover:bg-blue-700">Salvar</button>
+            
+            </div>
+
+        </div>
+
+    </header>
+
+    <section class="w-full px-20 py-10 flex gap-15 flex-row flex-wrap">
+        <div class="w-75 h-55 bg-white rounded-md shadow-xl border px-4 py-8 flex flex-col justify-between">
+            <div>
+                <p class="font-semibold tracking-wide text-2xl">Produto</p>
+                <span class="text-lg">R$ 50,00</span>
+            </div>
+
+            <div>
+                <button class="px-8 py-1 rounded-md shadow-sm text-white bg-blue-600 duration-200 hover:bg-blue-700 active:translate-y-0.5" onclick="ExibirEditar()">Editar</button>
+                <button class="px-8 py-1 rounded-md shadow-sm text-white bg-red-600 duration-200 hover:bg-red-700 active:translate-y-0.5">Deletar</button>
+            </div>
+        </div>
+    </section>
+
+
+</body>
+</html>
